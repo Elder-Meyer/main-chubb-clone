@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chubb Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+  </head>
+  <body>
+    <!-- TABS CONTAINER -->
+    <div class="tabs-container">
+      <!-- TABS SELECTOR -->
+      <div class="tabs-switcher">
+        <button class="tablink" onclick="openTab(event, 'tab1', 'section1')">
+          Personas y Familias
+        </button>
+        <button class="tablink" onclick="openTab(event, 'tab2', 'section2')">
+          Empresas
+        </button>
+        <button class="tablink" onclick="openTab(event, 'tab3', 'section3')">
+          Corredores y Agentes
+        </button>
+      </div>
+
+      <!-- TABS CONTENT -->
+      <div class="tab-display-content">
+        <div id="tab1" class="tab-content">
+          <div class="tab-content-wrapper">
+            <span>#PROTEGIENDOTUSDECISIONES</span>
+            <h2>¡Hola, somos Chubb!</h2>
+            <p>
+              La aseguradora que está siempre protegiendo tus decisiones todos
+              los días. ¿En qué situaciones no pensaste en nosotros?
+            </p>
+            <button class="btn">Conoce nuestra campaña</button>
+            <img
+              src="https://www.chubb.com/content/dam/chubb-sites/chubb/latam/home_page/banner_600x600.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div id="tab2" class="tab-content">
+          <div class="tab-content-wrapper">
+            <span>ESTAMOS AQUI PARA TI Y PARA PROTEGER TU NEGOCIO</span>
+            <h2>Te asesoramos para prevenir riesgos de tu empresa</h2>
+            <p>
+              En Chubb, tienes un socio con larga experiencia en el mercado. Te
+              ayudamos a administrar tus riesgos de manera proactiva y a
+              agilizar tus reclamos.
+            </p>
+            <button class="btn">Te brindamos soluciones</button>
+            <button class="btn" style="background-color: transparent; border: 1px solid #000">
+              Conocé más
+            </button>
+            <img
+              src="https://www.chubb.com/content/dam/chubb-sites/chubb/latam/home_page/Chubb-Homepage-BDM-1-600x600.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div id="tab3" class="tab-content">
+          <div class="tab-content-wrapper">
+            <span style="color: white">SOMOS TUS SOCIOS EN LA PROTECCIÓN</span>
+            <h2 style="color: white">Hacemos más por ti y por tus clientes</h2>
+            <p style="color: white">
+              Cuando te asocias con Chubb, invertimos en tu éxito. Tendrás
+              acceso a apoyo, capacitaciones y recursos educacionales que te
+              pondrán por encima de tu competencia
+            </p>
+            <button class="btn">Portal ChubbNet</button>
+            <button class="btn" style="color: white;background-color: transparent;border: 1px solid white;">
+              Cotiza tu seguro de auto
+            </button>
+            <img
+              src="https://www.chubb.com/content/dam/chubb-sites/chubb/latam/home_page/Chubb-Homepage-AyB-5-600x600.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END TABS CONTAINER -->
+
+    <!-- PRINCIPAL LINK -->
+    <div class="reference-container">
+      <h2>Facturación 4.0: Entérate aquí como actualizar tus datos.</h2>
+      <a href="#">
+        Ver puntos de contacto Chubb
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
+        </svg>
+      </a>
+    </div>
+    <!-- END PRINCIPAL LINK -->
+
+    <!-- RENDER LARGE CONTENT TABS -->
+    <section>
+      <!-- (1) LARGE RENDER CONTENT -->
+      <div class="sectioncontent personas-section" id="section1">
+        <!-- SLIDER -->
+        <div class="personas-slider">
+          <div>
+            <div class="mySlides">
+              <img src="https://www.w3schools.com/w3css/img_snowtops.jpg" style="width: 100%" />
+              <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                French Alps
+              </div>
+            </div>
+
+            <div class="mySlides">
+              <img src="https://www.w3schools.com/w3css/img_lights.jpg" style="width: 100%" />
+              <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+                Northern Lights
+              </div>
+            </div>
+
+            <div class="mySlides">
+              <img src="https://www.w3schools.com/w3css/img_mountains.jpg" style="width: 100%" />
+              <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+                Beautiful Mountains
+              </div>
+            </div>
+
+            <div class="mySlides">
+              <img src="https://www.w3schools.com/w3css/img_forest.jpg" style="width: 100%" />
+              <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
+                The Rain Forest
+              </div>
+            </div>
+
+
+            <button onclick="plusDivs(-1)"
+            >
+              <=
+            </button>
+            <button onclick="plusDivs(1)">
+              =>
+            </button>
+          </div>
+        </div>
+        <!-- END SLIDER -->
+
+        <!-- BLOG -->
+        <div class="personas-blog">
+          <p>BLOG</p>
+          <a href="#" class="item-blog">
+            <div>
+              <img
+                src="https://www.chubb.com/content/dam/chubb-sites/chubb/sg-en/images/home-page/insights-(335x335px)/if-insights-needhomeinsurance-335x335.jpg"
+                alt=""
+              />
+            </div>
+            <h2>El mejor momento para contratar un seguro de hogar es ahora</h2>
+            <p class="item-blog-link">
+              leer mas
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </p>
+          </a>
+          <a href="#" class="item-blog">
+            <div>
+              <img
+                src="https://www.chubb.com/content/dam/chubb-sites/chubb/latam/mx-es/home_page/microscope.png"
+                alt=""
+              />
+            </div>
+            <h2>La verdadera razón de ser de los seguros contra el cáncer</h2>
+            <p class="item-blog-link">
+              leer mas
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </p>
+          </a>
+          <a href="#" class="item-blog">
+            <div>
+              <img
+                src="https://www.chubb.com/content/dam/chubb-sites/chubb/uk-en/home_page/PRTNR-INSIGHTS-Benefits-Ancillary-Revenue.png"
+                alt=""
+              />
+            </div>
+            <h2>Recomendaciones para un viaje seguro</h2>
+            <p class="item-blog-link">
+              leer mas
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </p>
+          </a>
+        </div>
+        <!-- END BLOG -->
+
+        <!-- INSURANCE -->
+        <div class="personas-seguros">
+          <p>SEGUROS</p>
+          <div class="item-seguro">
+            <a href="#">
+              <h2>Seguro de Auto</h2>
+              <p>
+                Nuestros Servicios van más allá de tu auto. Te protegemos en
+                cada uno de tus viajes
+              </p>
+              <strong>
+                Conoce más sobre este seguro
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </strong>
+            </a>
+          </div>
+          <div class="item-seguro">
+            <a href="#">
+              <h2>Seguro de Hogar</h2>
+              <p>Disfruta de tu esfuerzo y espacio sin preocupaciones</p>
+              <strong>
+                Conoce más sobre este seguro
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </strong>
+            </a>
+          </div>
+          <div class="item-seguro">
+            <a href="#">
+              <h2>Seguro de Hospitalización + Dr. Kura</h2>
+              <p>
+                Protege tu salud para lo que viene y recibe de orientación
+                medica por videollamada
+              </p>
+              <strong>
+                Cotiza tu seguro
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </strong>
+            </a>
+          </div>
+          <div></div>
+          <div>
+            <button onclick="window.location.href='##'">
+              Ver todos los seguros
+            </button>
+          </div>
+        </div>
+        <!-- END INSURANCE -->
+      </div>
+      <!-- (1) END LARGE RENDER CONTENT -->
+
+      <!-- (2) LARGE RENDER CONTENT -->
+      <div
+        class="sectioncontent empresas-section"
+        id="section2"
+        style="height: 100px"
+      >
+        <button>2</button>
+      </div>
+      <!-- (2) END LARGE RENDER CONTENT -->
+
+      <!-- (3) LARGE RENDER CONTENT -->
+      <div
+        class="sectioncontent corredores-section"
+        id="section3"
+        style="height: 100px"
+      >
+        <button>3</button>
+      </div>
+      <!-- (3) END LARGE RENDER CONTENT -->
+    </section>
+    <!-- END RENDER LARGE CONTENT TABS -->
+
+    <!-- ADDITIONAL INFO -->
+    <div class="cotiza-section">
+      <div class="cotiza-section-img-container">
+        <img
+          src="https://www.chubb.com/content/dam/chubb-sites/chubb/us-en/home_page/initial-content/Illustration-redesign.svg"
+          alt=""
+        />
+      </div>
+      <div class="cotiza-section-principal-text">
+        <span>COTIZA</span>
+        <h2>
+          Te brindamos asesoría para encontrar la protección adecuada a tus
+          necesidades
+        </h2>
+        <button onclick="window.location.href='##'">¿Buscas asesoría?</button>
+      </div>
+    </div>
+    <!-- END ADDITIONAL INFO -->
+
+    <script src="script.js"></script>
+    <script src="slider.js"></script>
+  </body>
+</html>
