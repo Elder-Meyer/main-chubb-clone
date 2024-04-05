@@ -185,6 +185,7 @@ section{
   border: 1px solid #000000;
   padding: 16px;
   border-radius: 50px;
+  user-select: none;
 }
 .slider-item .back-btn div, .slider-item .next-btn div:hover{ cursor: pointer }
 /* .slider-item .img{ border: 2px solid red; } */
