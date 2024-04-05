@@ -7,7 +7,7 @@ function openTab(event, tabName, sectionName) {
     tabcontent[i].style.display = "none";
   }
 
-  sectioncontent = document.getElementsByClassName("sectioncontent");
+  sectioncontent = document.getElementsByClassName("section-content");
   for (i = 0; i < sectioncontent.length; i++) {
     sectioncontent[i].style.display = "none";
   }
