@@ -1,4 +1,4 @@
-// code for slider
+// code for sliders
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -8,7 +8,7 @@ function plusDivs(n) {
 
 function showDivs(n) {
   var i;
-  var x = document.getElementsByClassName("mySlides");
+  var x = document.getElementsByClassName("slide-personas");
   if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
