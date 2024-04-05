@@ -2,6 +2,7 @@
 var slideIndex = 1;
 showDivs(slideIndex, "slide-personas");
 showDivs(slideIndex, "slide-empresas");
+showDivs(slideIndex, "slide-corredores");
 
 function plusDivs(n, className) {
   showDivs(slideIndex += n, className);
