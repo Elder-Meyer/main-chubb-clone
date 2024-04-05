@@ -1,27 +1,22 @@
 /* focus disabled for all items */
-*:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-svg{
-  width: 24px;
-  height: 24px;
-}
+*:focus { outline: none !important;box-shadow: none !important;}
+svg{ width: 24px; height: 24px;}
 
-/* TABS CONTAINER */
-/* estados iniciales para no mostrar el contenido de las tabs interno como externo */
-section{
-  position: relative;
-  z-index: 100;
-  background: white;
-}
-.tab-content {
-  display: none;
-}
-.sectioncontent {
-  display: none;
-}
 
+
+/* **** TABS CONTAINER **** */
+/* columna der */
+.tabs-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+}
+/***** TABS SELECTOR *****/
+/* columna izq, tabs items */
+.tabs-switcher{
+  display: flex;
+  flex-flow: column;
+}
 /* diseños de tabs, seleccionadas y no seleccionadas */
 .tablink {
   border: none;
@@ -32,42 +27,20 @@ section{
   height: 215px;
   font-size: 50px;
 }
-.tablink:hover {
-  color: #6E27C5
-}
+.tablink:hover { color: #6E27C5 }
+.active:hover{ color: black }
+.active:nth-child(1){ background: #01C1D6 }
+.active:nth-child(2){ background: #FFB617 }
+.active:nth-child(3){ background: #150F96; color: white }
+/***** END TABS SELECTOR *****/
 
-.active:hover{
-  color: black
-}
-.active:nth-child(1){
-  background: #01C1D6;
-}
-.active:nth-child(2){
-  background: #FFB617;
-}
-.active:nth-child(3){
-  background: #150F96;
-  color: white
-}
 
-/* contenedor de tabs y contenido interno */
-.tabs-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0px;
-}
 
-/* columna izq, tabs items */
-.tabs-switcher{
-  display: flex;
-  flex-flow: column;
-}
-
-/* columna der. tabs content interno */
+/***** TABS CONTENT *****/
 /* .tab-display-content{
   border: 3px solid red;
 } */
-
+.tab-content { display: none }
 .tab-content{
   height: 100%; 
   padding: 0 80px;
@@ -119,11 +92,6 @@ section{
   border: none;
   width: max-content;
 }
-.tab-content-wrapper .btn:nth-child(2){
-  border: 3px solid red
-}
-
-
 .tab-content img{
   border-radius: 100%;
   width: 400px;
@@ -132,19 +100,15 @@ section{
   right: -60px;
   z-index: 10;
 }
-.tab-content:nth-child(1){
-  background-color: #01C1D6;
-}
-.tab-content:nth-child(2){
-  background-color: #FFB617;
-}
-.tab-content:nth-child(3){
-  background-color: #150F96;
-}
+.tab-content:nth-child(1){ background-color: #01C1D6 }
+.tab-content:nth-child(2){ background-color: #FFB617 }
+.tab-content:nth-child(3){ background-color: #150F96 }
+/***** END TABS CONTENT *****/
+/***** END TABS CONTAINER *****/
 
 
 
-/* link referencie view */
+/***** PRINCIPAL LINK *****/
 .reference-container{
   padding: 25px 150px;
   display: flex;
@@ -172,25 +136,33 @@ section{
   padding: 8px 3px;
   border: 1px solid transparent
 }
+.reference-container a:hover{ border-bottom-color: white }
+/***** END PRINCIPAL LINK *****/
 
-.reference-container a:hover{
-  border-bottom-color: white;
+
+
+/***** RENDER LARGE CONTENT TABS *****/
+section{
+  position: relative;
+  z-index: 100;
+  background: white;
 }
-
-
-/* PERSONAS SECTION */
-.personas-section{
+.section-content { display: none }
+.principal-section{
   width: 100%;
 }
-/* slidr section */
-.personas-slider{
+
+
+
+/***** SLIDER *****/
+.slider-item{
   padding: 80px 150px;
   min-height: 304px;
   display: grid;
   grid-template-columns: 2fr 3fr 5fr 2fr;
   gap: 28px ;
 }
-.personas-slider .back-btn{
+.slider-item .back-btn{
   height: 100%;
   width: 100%;
   display: flex;
@@ -198,7 +170,7 @@ section{
   align-items: center;
   position: relative;
 }
-.personas-slider .back-btn span{
+.slider-item .back-btn span{
   position: absolute;
   top: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -209,25 +181,22 @@ section{
   color: #000000;
   padding: 8px 0;
 }
-.personas-slider .back-btn div, .personas-slider .next-btn div{
+.slider-item .back-btn div, .slider-item .next-btn div{
   border: 1px solid #000000;
   padding: 16px;
   border-radius: 50px;
 }
-.personas-slider .back-btn div, .personas-slider .next-btn div:hover{
-  cursor: pointer;
-}
-.personas-slider .img{
-}
-.personas-slider .img img{
+.slider-item .back-btn div, .slider-item .next-btn div:hover{ cursor: pointer }
+/* .slider-item .img{ border: 2px solid red; } */
+.slider-item .img img{
   width: 304px;
 }
-.personas-slider .caption{
+.slider-item .caption{
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
 }
-.personas-slider .caption h2{
+.slider-item .caption h2{
   font-family: 'Times New Roman', Times, serif;
   font-style: normal;
   font-weight: 400;
@@ -236,7 +205,7 @@ section{
   color: #000000;
   margin: 0 0 50px;
 }
-.personas-slider .caption a{
+.slider-item .caption a{
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -248,21 +217,20 @@ section{
   width: max-content;
   padding: 15px 35px;
 }
-.personas-slider .caption a:hover{
-  text-decoration: underline;
-}
-.personas-slider .next-btn{
+.slider-item .caption a:hover{ text-decoration: underline }
+.slider-item .next-btn{
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
+/***** END SLIDER *****/
 
 
 
-/* bloog section */
-.personas-blog{
+/***** BLOG *****/
+.blog-section{
   background-color: #FF6600;
   padding: 80px 150px;
   min-height: 503px;
@@ -289,7 +257,7 @@ a.item-blog h2 {
   line-height: 34px;
   margin: 20px 0;
 }
-.personas-blog p{
+.blog-section p{
   margin: 0;
   padding: 0;
   color: #000000;
@@ -306,9 +274,12 @@ a.item-blog h2 {
   align-items: center;
   margin-bottom: 0;
 }
+/***** END BLOG *****/
 
-/* seguros section */
-.personas-seguros{
+
+
+/***** INSURANCE SECTION *****/
+.seguros-section{
   padding: 80px 150px;
   min-height: 298px;
   display: grid;
@@ -354,7 +325,7 @@ a.item-blog h2 {
   line-height: 19px;
   color: #000000;
 }
-.personas-seguros > div > button{
+.seguros-section > div > button{
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -365,19 +336,13 @@ a.item-blog h2 {
   background-color: white;
   border: 1px solid #000000
 }
-.personas-seguros > div > button:hover{ cursor: pointer; }
+.seguros-section > div > button:hover{ cursor: pointer; }
+/***** INSURANCE SECTION *****/
+/***** END RENDER LARGE CONTENT TABS *****/
 
 
 
-
-
-
-
-
-
-
-
-/* seccion final presente en las 3 principales categorias */
+/***** ADDITIONAL INFO *****/
 .cotiza-section{
   background-color: #6E27C5;
   padding: 80px 150px 0;
@@ -428,4 +393,4 @@ a.item-blog h2 {
   height: 558px;
   object-position: center right;
 }
-
+/***** END ADDITIONAL INFO *****/
