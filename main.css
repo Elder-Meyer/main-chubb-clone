@@ -10,12 +10,22 @@ svg{ width: 24px; height: 24px;}
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0px;
+
+  @media (width <= 1024px){
+    grid-template-columns: 1fr;
+  }
+  
 }
 /***** TABS SELECTOR *****/
 /* columna izq, tabs items */
 .tabs-switcher{
   display: flex;
   flex-flow: column;
+  
+  @media (width <= 1024px){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 /* diseños de tabs, seleccionadas y no seleccionadas */
 .tablink {
@@ -26,6 +36,16 @@ svg{ width: 24px; height: 24px;}
   text-align: left;
   height: 215px;
   font-size: 50px;
+  
+  @media (width <= 1310px){
+    padding-left: 80px;
+  }
+  @media (width <= 1024px){
+    height: 66px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
 }
 .tablink:hover { color: #6E27C5 }
 .active:hover{ color: black }
@@ -45,6 +65,9 @@ svg{ width: 24px; height: 24px;}
   height: 100%; 
   padding: 0 80px;
   position: relative;
+  @media (width <= 1024px){
+    min-height: 80vh;
+  }
 }
 .tab-content .tab-content-wrapper{
   height: 100%;
@@ -99,6 +122,17 @@ svg{ width: 24px; height: 24px;}
   bottom: -190px;
   right: -60px;
   z-index: 10;
+
+  @media (width <= 1310px){
+    width: 300px;
+    bottom: -130px
+  }
+  @media (width <= 1150px){
+    bottom: -110px;
+    right: -80px;
+    width: 250px;
+  }
+  
 }
 .tab-content:nth-child(1){ background-color: #01C1D6 }
 .tab-content:nth-child(2){ background-color: #FFB617 }
@@ -116,6 +150,12 @@ svg{ width: 24px; height: 24px;}
   background-color: #6E27C5;
   position: relative;
   z-index: 100;
+
+  @media (width <= 1024px){
+    flex-flow: column wrap;
+    align-items: flex-start;
+    padding: 25px 80px;
+  }
 }
 .reference-container h2{ 
   padding: 0;
