@@ -219,10 +219,14 @@ section{
   display: grid;
   grid-template-columns: 2fr 3fr 5fr 2fr;
   gap: 28px ;
+  order: 1;
 
   @media (width <= 1200px){
     padding: 80px 80px;
     gap: 10px;
+  }
+  @media (width <= 900px){
+    grid-template-columns: repeat(12, 1fr);
   }
 }
 .slider-item .back-btn{
@@ -233,6 +237,10 @@ section{
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  @media (width <= 900px){
+    grid-column: 1/2;
+    order: 4
+  }
 }
 .slider-item .back-btn span{
   border: 3px solid blue;
@@ -249,6 +257,10 @@ section{
   @media (width <= 1200px){
     font-size: 13px;
   }
+  @media (width <= 900px){
+    top: -380px;
+    width: 300px;
+  }
 }
 .slider-item .back-btn div, .slider-item .next-btn div{
   border: 1px solid #000000;
@@ -261,12 +273,27 @@ section{
 .slider-item .img img{
   border: 3px solid magenta;
   width: 304px;
+  @media (width <= 900px){
+    width: 100%;
+  }
+}
+.slider-item .img{
+  border: 3px solid cyan;
+  @media (width <= 900px){
+    grid-column: 1/6;
+    order: 2
+  }
 }
 .slider-item .caption{
   border: 3px solid brown;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
+
+  @media (width <= 900px){
+    grid-column: 6/13;
+    order: 3
+  }
 }
 .slider-item .caption h2{
   border: 3px solid yellow;
@@ -298,6 +325,11 @@ section{
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  @media (width <= 900px){
+    grid-column: 2/3;
+    order: 5
+  }
 }
 /***** END SLIDER *****/
 
