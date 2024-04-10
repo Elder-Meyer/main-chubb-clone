@@ -11,7 +11,7 @@ svg{ width: 24px; height: 24px;}
   grid-template-columns: 1fr 1fr;
   gap: 0px;
 
-  @media (width <= 1024px){
+  @media (width <= 900px){
     grid-template-columns: 1fr;
   }
   
@@ -22,7 +22,7 @@ svg{ width: 24px; height: 24px;}
   display: flex;
   flex-flow: column;
   
-  @media (width <= 1024px){
+  @media (width <= 900px){
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -31,16 +31,19 @@ svg{ width: 24px; height: 24px;}
 .tablink {
   border: none;
   background-color: #FFFFFF;
-  padding: 0 0 0 150px;
+  padding: 0 0 0 180px;
   cursor: pointer;
   text-align: left;
   height: 215px;
   font-size: 50px;
   
-  @media (width <= 1310px){
+  @media (width <= 1536px){
+    padding-left: 150px;
+  }
+  @media (width <= 1200px){
     padding-left: 80px;
   }
-  @media (width <= 1024px){
+  @media (width <= 900px){
     height: 66px;
     padding: 20px;
     font-size: 20px;
@@ -65,10 +68,10 @@ svg{ width: 24px; height: 24px;}
   height: 100%; 
   padding: 0 80px;
   position: relative;
-  @media (width <= 1024px){
+  @media (width <= 900px){
     min-height: 80vh;
   }
-  @media (width <= 450px){
+  @media (width <= 600px){
     padding:30px 30px
   }
 }
@@ -126,16 +129,16 @@ svg{ width: 24px; height: 24px;}
   right: -60px;
   z-index: 10;
 
-  @media (width <= 1310px){
+  @media (width <= 1200px){
     width: 300px;
     bottom: -130px
   }
-  @media (width <= 1150px){
+  @media (width <= 1200px){
     bottom: -110px;
     right: -80px;
     width: 250px;
   }
-  @media (width <= 450px){
+  @media (width <= 600px){
     
   }
   
@@ -157,10 +160,10 @@ svg{ width: 24px; height: 24px;}
   position: relative;
   z-index: 100;
 
-  @media (width <= 1310px){
+  @media (width <= 1200px){
     padding: 25px 80px;
   }
-  @media (width <= 1024px){
+  @media (width <= 900px){
     flex-flow: column wrap;
     align-items: flex-start;
     padding: 25px 80px;
@@ -185,7 +188,7 @@ svg{ width: 24px; height: 24px;}
   padding: 8px 3px;
   border: 1px solid transparent;
 
-  @media (width <= 1310px){
+  @media (width <= 1200px){
     margin: 0;
     padding: 8px 0px;
   }
@@ -210,17 +213,20 @@ section{
 
 /***** SLIDER *****/
 .slider-item{
+  border: 3px solid red;
   padding: 80px 150px;
   min-height: 304px;
   display: grid;
   grid-template-columns: 2fr 3fr 5fr 2fr;
   gap: 28px ;
 
-  @media (width <= 1310px){
-    padding: 80px 80px
+  @media (width <= 1200px){
+    padding: 80px 80px;
+    gap: 10px;
   }
 }
 .slider-item .back-btn{
+  border: 3px solid green;
   height: 100%;
   width: 100%;
   display: flex;
@@ -229,6 +235,7 @@ section{
   position: relative;
 }
 .slider-item .back-btn span{
+  border: 3px solid blue;
   position: absolute;
   top: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -238,6 +245,10 @@ section{
   line-height: 26px;
   color: #000000;
   padding: 8px 0;
+
+  @media (width <= 1200px){
+    font-size: 13px;
+  }
 }
 .slider-item .back-btn div, .slider-item .next-btn div{
   border: 1px solid #000000;
@@ -248,14 +259,17 @@ section{
 .slider-item .back-btn div, .slider-item .next-btn div:hover{ cursor: pointer }
 /* .slider-item .img{ border: 2px solid red; } */
 .slider-item .img img{
+  border: 3px solid magenta;
   width: 304px;
 }
 .slider-item .caption{
+  border: 3px solid brown;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
 }
 .slider-item .caption h2{
+  border: 3px solid yellow;
   font-family: 'Times New Roman', Times, serif;
   font-style: normal;
   font-weight: 400;
@@ -278,6 +292,7 @@ section{
 }
 .slider-item .caption a:hover{ text-decoration: underline }
 .slider-item .next-btn{
+  border: 3px solid green;
   height: 100%;
   width: 100%;
   display: flex;
@@ -298,16 +313,16 @@ section{
   gap: 28px;
   align-items: flex-start;
 
-  @media (width <= 1310px){
+  @media (width <= 1200px){
     padding: 80px 80px
   }
-  @media (width <= 450px){
+  @media (width <= 600px){
     padding:30px 30px
   }
-  @media (width <= 1024px){
+  @media (width <= 900px){
     grid-template-columns: 1fr 1fr 1fr;
   }
-  @media (width <= 720px){
+  @media (width <= 600px){
     grid-template-columns: 1fr 1fr;
   }
   @media (width <= 600px){
@@ -343,10 +358,10 @@ a.item-blog h2 {
   line-height: 19px;
 }
 .blog-section p:first-child{
-  @media (width <= 1024px){
+  @media (width <= 900px){
     grid-column: 1/4;
   }
-  @media (width <= 720px){
+  @media (width <= 600px){
     grid-column: 1/3;
   }
   @media (width <= 600px){
@@ -373,7 +388,7 @@ a.item-blog h2 {
   gap: 28px;
   align-items: flex-start;
 
-  @media (width <= 1310px){
+  @media (width <= 1200px){
     padding: 80px 80px
   }
 }
@@ -440,7 +455,7 @@ a.item-blog h2 {
   grid-template-columns: 1fr 1fr;
   column-gap: 0px;
 
-  @media (width <= 1310px){
+  @media (width <= 1200px){
     padding: 80px 80px
   }
 }
