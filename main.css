@@ -44,7 +44,7 @@ svg{ width: 24px; height: 24px;}
     padding-left: 80px;
   }
   @media (width <= 900px){
-    height: 66px;
+    height: auto;
     padding: 20px;
     font-size: 20px;
     text-align: center;
